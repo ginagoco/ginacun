@@ -11,7 +11,13 @@ $factory->define(Colegio::class, function (Faker $faker) {
      'tipo_colegio' => $faker->word,
      'direccion' => $faker->address,
      'correo' => $faker->safeEmail,
-     'contacto' => $faker->phoneNumber,
+     'data' => [
+         "celular" => $faker->phoneNumber,
+         "telefono" => $faker->tollFreePhoneNumber,     
+         "mision" => $faker->paragraph,
+         "vision" => $faker->paragraph,
+         "ciudad" => $faker->city
+     ],
      'estado' => 1
     ];
 });

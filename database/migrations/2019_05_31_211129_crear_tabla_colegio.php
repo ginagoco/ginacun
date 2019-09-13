@@ -15,7 +15,7 @@ class CrearTablaColegio extends Migration
             $table->string('tipo_colegio',250);
             $table->string('direccion',255);
             $table->string('correo',255);
-            $table->string('contacto',50);
+            $table->json('data');
             $table->integer('estado');
             $table->timestamps();
         });
